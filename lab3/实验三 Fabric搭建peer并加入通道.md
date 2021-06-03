@@ -30,9 +30,11 @@
 - 222.195.70.189
 - 222.195.70.190
 
-在222.195.70.186这个服务器上已经搭建了CA服务器和Orderer服务器。同时各个服务器上为同学们注册了各自的账户，账户信息见附件 Account.txt，同学们自行选择喜欢的方式连接到服务器完成实验任务。
+在222.195.70.186这个服务器上已经搭建了CA服务器和Orderer服务器。同时各个服务器上为同学们注册了各自的账户，账户信息见群里分享的共享表格 Account，同学们自行选择喜欢的方式（ssh）连接到服务器完成实验任务。
 
 在本次实验中，所有同学启动的peer节点都属于一个组织，peer节点组织名为Peer，需要加入的通道名称为bcclass 。
+
+同学们需要用到的程序有fabric-ca-client、peer。其可执行文件所在的路径都已经设置为系统的全局变量，可以直接使用这些命令，但是需要注意使程序能够找到配置文件所在的目录（例如使用export来设置用户环境变量，export FABRIC_CFG_PATH=config_file_path）。
 
 
 
@@ -52,8 +54,10 @@
 
 涉及的主要是以下两条指令（参数自己修改）
 
+其中id.name和id.secret可以随意取值，为了不覆盖掉他人的id账户，请考虑使用account中的用户名作为id.name
+
 ```
-注册组织peer (一定要记得 --home指定目录或者export设置环境变量)
+注册组织peer (一定要记得 --home指定目录或者export设置工作目录环境变量)
 fabric-ca-client register --id.name myname_1 --id.secret mysecret --id.type peer -u http://127.0.0.1:7056 --mspdir ./admin/msp
 
 获得组织peer的msp
@@ -161,7 +165,7 @@ peer channel list
 
 ## 实验要求
 
-要求提供一张带有自己账户名以及调用peer channel list 成功输出加入的通道的信息截图（如“加入通道”部分的第2张图）
+完成实验和实验报告，实验报告要求提供一张带有自己账户名以及调用peer channel list 成功输出加入的通道的信息截图（如“加入通道”部分的第2张图）。报告发送至助教邮箱。
 
 
 
