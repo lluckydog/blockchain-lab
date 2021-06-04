@@ -36,6 +36,20 @@
 
 同学们需要用到的程序有fabric-ca-client、peer。其可执行文件所在的路径都已经设置为系统的全局变量，可以直接使用这些命令，但是需要注意使程序能够找到配置文件所在的目录（例如使用export来设置用户环境变量，export FABRIC_CFG_PATH=config_file_path）。
 
+------
+
+222.195.70.186机器上新建了一个用户kecheng，passwd：kecheng
+
+家目录下：
+
+admin-msp：Peer组织的admin
+
+ca-admin-msp：CA组织的admin
+
+bcclass.block：bcclass通道的初始块
+
+需要的时候用scp指令拷贝
+
 
 
 ## 实验流程
