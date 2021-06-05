@@ -30,7 +30,7 @@
 - 222.195.70.189
 - 222.195.70.190
 
-在222.195.70.186这个服务器上已经搭建了CA服务器和Orderer服务器。同时各个服务器上为同学们注册了各自的账户，账户信息见群里分享的共享表格 Account，同学们自行选择喜欢的方式（ssh）连接到服务器完成实验任务。
+在222.195.70.186这个服务器上已经搭建了CA服务器和Orderer服务器,CA服务端口号为7054，orderer服务端口号为7050。同时各个服务器上为同学们注册了各自的账户，账户信息见群里分享的共享表格 Account，同学们自行选择喜欢的方式（ssh）连接到服务器完成实验任务。
 
 在本次实验中，所有同学启动的peer节点都属于一个组织，peer节点组织名为Peer，需要加入的通道名称为bcclass 。
 
@@ -72,10 +72,10 @@ bcclass.block：bcclass通道的初始块
 
 ```
 注册组织peer (一定要记得 --home指定目录或者export设置工作目录环境变量)
-fabric-ca-client register --id.name myname_1 --id.secret mysecret --id.type peer -u http://127.0.0.1:7056 --mspdir ./admin/msp
+fabric-ca-client register --id.name myname_1 --id.secret mysecret --id.type peer -u http://127.0.0.1:7054 --mspdir ./admin/msp
 
 获得组织peer的msp
-fabric-ca-client enroll -u http://myname_1:mysecret@127.0.0.1:7056 --mspdir ./myname_1/msp
+fabric-ca-client enroll -u http://myname_1:mysecret@127.0.0.1:7054 --mspdir ./myname_1/msp
 ```
 
 
