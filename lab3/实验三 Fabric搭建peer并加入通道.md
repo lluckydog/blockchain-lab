@@ -143,7 +143,7 @@ export CORE_PEER_LOCALMSPID 设置连接peer的localmspid
 export CORE_PEER_MSPCONFIGPATH 设置msp文件的目录路径
 
 方法二：
-core.yaml文件中的mspConfigPath指定了msp目录,在msp目录下的signcerts目录中存放组织admin的证书
+core.yaml文件中的mspConfigPath指定了msp目录,在msp目录下的signcerts目录中存放组织admin的证书,keystore下面放对应私钥
 ```
 
 
