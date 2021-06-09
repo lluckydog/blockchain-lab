@@ -2,6 +2,8 @@
 
 
 
+[TOC]
+
 ## 介绍
 
 在Fabric中，根据提供的服务不同，可以把服务节点分为三类：CA、Orderer和Peer。
